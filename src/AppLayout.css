@@ -1,0 +1,39 @@
+.dashboard {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0;
+  padding: clamp(16px, 3vw, 36px);
+  box-sizing: border-box;
+
+  background-color: #faf4e9;
+  border-radius: 12px;
+
+  font-family: "DM Sans", sans-serif;
+  color: #49382e;
+}
+
+.visualization-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 32px;
+  width: 100%;
+}
+
+.visualization-layout .chart-container,
+.visualization-layout .map-container {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+}
+
+@media (max-width: 800px) {
+  .visualization-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

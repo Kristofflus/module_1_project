@@ -1,0 +1,57 @@
+.map-container {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: clamp(16px, 3vw, 28px);
+
+  background-color: #faf4e9;
+  border-radius: 12px;
+
+  font-family: "DM Sans", sans-serif;
+  color: #49382e;
+}
+
+.map-header {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.map-header h2 {
+  margin: 0 0 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #693e2c;
+}
+
+.map-header p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #806b5b;
+}
+
+.map-container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.map-country {
+  fill: #dfd1bc;
+  stroke: #faf4e9;
+  stroke-width: 0.65;
+  stroke-linejoin: round;
+  transition: fill 180ms ease;
+}
+
+.map-country.selected {
+  fill: #dfa044;
+  stroke: #9b5c2d;
+  stroke-width: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-country {
+    transition: none;
+  }
+}
